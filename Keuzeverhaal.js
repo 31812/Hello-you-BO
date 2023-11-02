@@ -139,6 +139,7 @@ if (StadDrugScenarioKeuze === "A"){
     BadKarma += 1;
 } else if (StadDrugScenarioKeuze === "B") {
     console.log("Ze kijken niet veel op en gaan verder met roken")
+    console.log("Jullie hebben erg veel lol en besluiten uiteindelijk beide naar huis te gaan")
     GoodKarma += 1;
 }
 }
@@ -161,13 +162,15 @@ if (Scenario3Keuze === "A") {
     GoodKarma += 1; // Verdien wat goede karma
 } else if (Scenario3Keuze === "B") {
     console.log("Je gaat naar huis om je broertjes te helpen met hun huiswerk, wat aardig van je.");
+    console.log("Na dat je klaar bent met je broertjes helpen is het al heel laat")
     GoodKarma += 1; // Verdien wat goede karma
 } else if (Scenario3Keuze === "C") {
     console.log("Je stelt voor om een filmavond bij jou thuis te houden, en hij stemt hiermee in.");
+    console.log("Jullie erg veel lol en je vriend besluit uiteindelijk naar huis te gaan")
     Popularity += 1; // Verhoog je populariteit
-    GoodKarma += 1; // Verdien wat goede karma
 } else {
     console.log("Je gaat naar je bijbaantje en verdient wat extra geld.");
+    console.log("Na je werk is het al erg laat")
     Wealth += 1; // Verhoog je welvaart
     Popularity -= 1; // Je bent niet beschikbaar voor sociale activiteiten, dus je populariteit daalt
     Intelligence += 1; // Verdien wat intelligentie door te werken
