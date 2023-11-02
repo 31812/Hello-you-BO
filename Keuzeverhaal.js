@@ -78,6 +78,72 @@ console.log("B. Nee, ik moet naar huis om mijn broertjes te helpen met hun huisw
 console.log("C. Laten we iets rustigers doen, zoals een filmavond bij mij thuis.");
 console.log("D. Ik heb een bijbaantje en moet vanmiddag werken, dus ik kan niet mee.");
 
+// Stad Scenario (Scenario 4) //
+
+function StadScenario(){
+    console.log("Op aankomst in de stad kom je een groep meisjes uit je klas tegen.");
+    console.log("Ze zien jullie ook, en een van de meisjes ken je goed en praat soms met je.");
+    console.log("Wat is jouw keuze?");
+
+    console.log("A. Maak kennis met de meisjes en probeer nieuwe vriendschappen te sluiten.");
+    console.log("B. Begroet de meisjes vriendelijk, maar blijf bij je vriend.");
+    console.log("C. Besluit om alleen rond te hangen en zie waar de dag je brengt.");
+
+    let StadScenarioKeuze;
+
+    do {
+        StadScenarioKeuze = readlinesync.question("Kies A, B of C: ");
+
+        if (StadScenarioKeuze !== "A" && StadScenarioKeuze !== "B" && StadScenarioKeuze !== "C") {
+            console.log("Ongeldige invoer. Probeer het opnieuw.");
+        }
+    } while (StadScenarioKeuze !== "A" && StadScenarioKeuze !== "B" && StadScenarioKeuze !== "C");
+
+    if (StadScenarioKeuze === "A") {
+        console.log("Je maakt kennis met de meisjes en probeert nieuwe vriendschappen te sluiten.");
+        console.log("Jullie hebben erg veel lol en het meisje wat je al een beetje kent geeft haar nummer aan je")
+        console.log("je zwaait ze gedag en besluit naar huis te gaan en zegt je vriend ook gedag")
+        GirlNumber = true
+        Popularity += 2; // Verhoog je populariteit omdat je nieuwe vrienden hebt gemaakt
+        GoodKarma += 1; // Verdien wat goede karma
+    } else if (StadScenarioKeuze === "B") {
+        console.log("Je begroet de meisjes vriendelijk, maar blijft bij je vriend.");
+        console.log("Jullie hebben erg veel lol en besluiten uiteindelijk beide naar huis te gaan")
+        Popularity += 1; // Verhoog je populariteit door sociaal te zijn
+    } else {
+        console.log("Je besluit om alleen rond te hangen en ziet waar de dag je brengt.");
+        console.log("Je komt een groep jongens van jou leeftijd tegen die aan het roken zijn en ze bieden je wat aan")
+        StadDrugScenario();
+    }
+}
+
+function StadDrugScenario(){
+
+    console.log("Neem jij je het aan?")
+    console.log("A. Ja")
+    console.log("B. Nee")
+
+    let StadDrugScenarioKeuze;
+
+    do {
+        StadDrugScenarioKeuze = readlinesync.question("Kies A of B")
+
+        if (StadDrugScenarioKeuze !== "A" && StadDrugScenarioKeuze !== "B"){
+            console.log("Ongeldige invoer. Probeer het opnieuw." );
+        }
+} while (StadDrugScenarioKeuze !== "A" && StadDrugScenarioKeuze !== "B")
+
+if (StadDrugScenarioKeuze === "A"){
+    console.log("Je rookt samen met de groep jongens")
+    console.log("Je vriend besluit maar weer naar huis te gaan")
+    BadKarma += 1;
+} else if (StadDrugScenarioKeuze === "B") {
+    console.log("Ze kijken niet veel op en gaan verder met roken")
+    GoodKarma += 1;
+}
+}
+
+
 let Scenario3Keuze;
 
 do {
@@ -89,14 +155,15 @@ do {
 } while (Scenario3Keuze !== "A" && Scenario3Keuze !== "B" && Scenario3Keuze !== "C" && Scenario3Keuze !== "D");
 
 if (Scenario3Keuze === "A") {
-    console.log("Je gaat met je vriend naar de stad en hebben een geweldige tijd samen.");
+    console.log("Je gaat met hem mee naar de stad");
+    StadScenario()
     Popularity += 1; // Verhoog je populariteit
     GoodKarma += 1; // Verdien wat goede karma
 } else if (Scenario3Keuze === "B") {
     console.log("Je gaat naar huis om je broertjes te helpen met hun huiswerk, wat aardig van je.");
     GoodKarma += 1; // Verdien wat goede karma
 } else if (Scenario3Keuze === "C") {
-    console.log("Je stelt voor om een filmavond bij jou thuis te houden, en je vrienden stemmen hiermee in.");
+    console.log("Je stelt voor om een filmavond bij jou thuis te houden, en hij stemt hiermee in.");
     Popularity += 1; // Verhoog je populariteit
     GoodKarma += 1; // Verdien wat goede karma
 } else {
@@ -106,6 +173,7 @@ if (Scenario3Keuze === "A") {
     Intelligence += 1; // Verdien wat intelligentie door te werken
 }
 
+// Scenario 5 //
 
     // Voeg hier meer scenario's en keuzes toe.
 
@@ -116,7 +184,8 @@ if (Scenario3Keuze === "A") {
 console.log("Welkom bij Karma");
 let startKeuze = readlinesync.question("Zeg 'start' om te beginnen");
 
-while (startanswer !== "start") {
+
+while (startKeuze !== "start") {
     console.log("Ongeldige invoer. Probeer het opnieuw.");
     startKeuze = readlinesync.question("Zeg 'start' om te beginnen");
 }
