@@ -253,7 +253,7 @@ function Dag2(){
             console.log("Goed gedaan! Een retorische vraag vereist geen antwoord.");
             Intelligence += 1; // Verhoog de intelligentie met 1
         } else {
-            console.log("Helaas, dat is niet correct.");
+            console.log("Helaas dat is niet het antwoord waar ik voor zocht...");
         }
     
         // Vraag 2
@@ -277,13 +277,22 @@ function Dag2(){
             console.log("Dat klopt! 'Gemotiveerd' is een synoniem voor 'enthousiast'.");
             Intelligence += 1; // Verhoog de intelligentie met 1
         } else {
-            console.log("Helaas dat is niet correct");
+            console.log("Helaas dat is niet het antwoord waar ik voor zocht...");
         }
     
         // Voeg hier meer vragen toe
     
         // Scenario voortzetten
-    }    
+    }   
+    
+    if (StadDrugVriendNummber = true){
+        console.log("Later op de dag krijg je een berich van de jongen van de stad om weer naar de stad te gaan")
+        console.log("Accepteer je de uitnodiging?")
+        console.log("A. Ja")
+        console.log("B. Nee")
+        let UitnodigingDrug = readlinesync.question("Wat is jou keuze?")
+
+    }
 }
 
 console.log("Welkom bij Karma");
