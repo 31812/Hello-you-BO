@@ -5,6 +5,8 @@ let GoodKarma = 0;
 let BadKarma = 0;
 let Popularity = 0;
 let Wealth = 0;
+let GirlNumber = false;
+let StadDrugVriendNummber = false;
 
 // Player stats //
 
@@ -194,11 +196,11 @@ function Dag2(){
     console.log("VOLGENDE DAG")
     console.log("Je hebt goed geslapen en stapt weer in de douche")
     console.log("Je broertjes zijn al eerder naar school gegaan, je maakt je klaar en begint naar school te gaan")
-    if (StadDrugVriendNummber = false){
+    if (StadDrugVriendNummber === false){
         console.log("op aankomst zie je je beste vriend en hij groet je")
         console.log("jullie besluiten om samen naar de klas van eerste uur nederlands te lopen")
         Nederlandsles()
-    } else if (StadDrugVriendNummber = true){
+    } else if (StadDrugVriendNummber === true){
         console.log("op aankomst zie je je beste vriend maar hij groet je niet")
         console.log("wat is zijn probleem?")
         console.log("Probeer hem te groeten?")
@@ -212,7 +214,7 @@ function Dag2(){
             }
         } while (GroetVriend !== "A" && GroetVriend !== "B");
         
-            if (GroetVriend = "A"){
+            if (GroetVriend === "A"){
                 console.log("Je probeert hem te groeten maar hij negeert je en loopt weg")
                 console.log("Je loopt alleen naar eerste lesuur Nederlands")
                 Nederlandsles()
@@ -221,7 +223,7 @@ function Dag2(){
                 console.log("Je loopt alleen naar eerste lesuur Nederlands")
                 Nederlandsles()
             }
-    } else if (GirlNumber = true){
+    } else if (GirlNumber === true){
         console.log("op aankomst zie je je beste vriend en hij groet je")
         console.log("jullie besluiten om samen naar de klas van eerste uur nederlands te lopen")
         console.log("Je ziet het meisje van gister en ze zwaait naar je met een lach")
@@ -285,7 +287,7 @@ function Dag2(){
         // Scenario voortzetten
     }   
     
-    if (StadDrugVriendNummber = true){
+    if (StadDrugVriendNummber === true){
         console.log("Later op de dag krijg je een berich van de jongen van de stad om weer naar de stad te gaan")
         console.log("Accepteer je de uitnodiging?")
         console.log("A. Ja")
