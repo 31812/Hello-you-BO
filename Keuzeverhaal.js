@@ -8,6 +8,8 @@ let Wealth = 0;
 
 // Player stats //
 
+// Eerste dag // 
+
 function StartGame() {
     console.log("Dit is mijn keuzeverhaal opdracht. In dit spel wordt je einde bepaald door je goede en slechte daden. Veel plezier!");
     console.log("Je bent 16 jaar oud en zit in het 4e jaar vwo technasium. Op deze leeftijd zul je veel belangrijke keuzes moeten maken.");
@@ -103,12 +105,14 @@ function StadScenario(){
         console.log("Je maakt kennis met de meisjes en probeert nieuwe vriendschappen te sluiten.");
         console.log("Jullie hebben erg veel lol en het meisje wat je al een beetje kent geeft haar nummer aan je")
         console.log("je zwaait ze gedag en besluit naar huis te gaan en zegt je vriend ook gedag")
+        Dag2()
         GirlNumber = true
         Popularity += 2; // Verhoog je populariteit omdat je nieuwe vrienden hebt gemaakt
         GoodKarma += 1; // Verdien wat goede karma
     } else if (StadScenarioKeuze === "B") {
         console.log("Je begroet de meisjes vriendelijk, maar blijft bij je vriend.");
         console.log("Jullie hebben erg veel lol en besluiten uiteindelijk beide naar huis te gaan")
+        Dag2()
         Popularity += 1; // Verhoog je populariteit door sociaal te zijn
     } else {
         console.log("Je besluit om alleen rond te hangen en ziet waar de dag je brengt.");
@@ -136,10 +140,14 @@ function StadDrugScenario(){
 if (StadDrugScenarioKeuze === "A"){
     console.log("Je rookt samen met de groep jongens")
     console.log("Je vriend besluit maar weer naar huis te gaan")
+    console.log("een van de jongens geeft je zijn nummer om misschien nog een keer dit te gaan doen")
+    Dag2()
+    StadDrugVriendNummber = true
     BadKarma += 1;
 } else if (StadDrugScenarioKeuze === "B") {
     console.log("Ze kijken niet veel op en gaan verder met roken")
     console.log("Jullie hebben erg veel lol en besluiten uiteindelijk beide naar huis te gaan")
+    Dag2()
     GoodKarma += 1;
 }
 }
@@ -163,26 +171,120 @@ if (Scenario3Keuze === "A") {
 } else if (Scenario3Keuze === "B") {
     console.log("Je gaat naar huis om je broertjes te helpen met hun huiswerk, wat aardig van je.");
     console.log("Na dat je klaar bent met je broertjes helpen is het al heel laat")
+    Dag2()
     GoodKarma += 1; // Verdien wat goede karma
 } else if (Scenario3Keuze === "C") {
     console.log("Je stelt voor om een filmavond bij jou thuis te houden, en hij stemt hiermee in.");
     console.log("Jullie erg veel lol en je vriend besluit uiteindelijk naar huis te gaan")
+    Dag2()
     Popularity += 1; // Verhoog je populariteit
 } else {
     console.log("Je gaat naar je bijbaantje en verdient wat extra geld.");
     console.log("Na je werk is het al erg laat")
+    Dag2()
     Wealth += 1; // Verhoog je welvaart
     Popularity -= 1; // Je bent niet beschikbaar voor sociale activiteiten, dus je populariteit daalt
     Intelligence += 1; // Verdien wat intelligentie door te werken
 }
-
-// Scenario 5 //
-
-    // Voeg hier meer scenario's en keuzes toe.
-
 }
 
-// Eerste dag // 
+// Tweede Dag // 
+
+function Dag2(){
+    console.log("VOLGENDE DAG")
+    console.log("Je hebt goed geslapen en stapt weer in de douche")
+    console.log("Je broertjes zijn al eerder naar school gegaan, je maakt je klaar en begint naar school te gaan")
+    if (StadDrugVriendNummber = false){
+        console.log("op aankomst zie je je beste vriend en hij groet je")
+        console.log("jullie besluiten om samen naar de klas van eerste uur nederlands te lopen")
+        Nederlandsles()
+    } else if (StadDrugVriendNummber = true){
+        console.log("op aankomst zie je je beste vriend maar hij groet je niet")
+        console.log("wat is zijn probleem?")
+        console.log("Probeer hem te groeten?")
+        console.log("A. Ja")
+        console.log("B. Nee")
+        do {
+            GroetVriend = readlinesync.question("Wat is jou keuze?");
+        
+            if (GroetVriend !== "A" && GroetVriend !== "B") {
+                console.log("Ongeldige invoer. Probeer het opnieuw.");
+            }
+        } while (GroetVriend !== "A" && GroetVriend !== "B");
+        
+            if (GroetVriend = "A"){
+                console.log("Je probeert hem te groeten maar hij negeert je en loopt weg")
+                console.log("Je loopt alleen naar eerste lesuur Nederlands")
+                Nederlandsles()
+            } else if (GroetVriend = "B"){
+                console.log("Je besluit hem niet te groeten hij doet toch al raar")
+                console.log("Je loopt alleen naar eerste lesuur Nederlands")
+                Nederlandsles()
+            }
+    } else if (GirlNumber = true){
+        console.log("op aankomst zie je je beste vriend en hij groet je")
+        console.log("jullie besluiten om samen naar de klas van eerste uur nederlands te lopen")
+        console.log("Je ziet het meisje van gister en ze zwaait naar je met een lach")
+        console.log("je zwaait vriendelijk terug")
+        Nederlandsles()
+    }
+
+    function Nederlandsles() {
+        console.log("Je bent aangekomen in je Nederlandse les op het Technasium. Laten we eens kijken hoe goed je Nederlandse taalvaardigheden zijn. Hier zijn enkele vragen:");
+    
+        // Vraag 1
+        console.log("Wat is de betekenis van het Nederlandse woord 'retorische vraag'?");
+        console.log("A. Een vraag die geen antwoord vereist.");
+        console.log("B. Een vraag die in het Frans is gesteld.");
+        console.log("C. Een vraag die alleen gesteld mag worden aan retorische experts.");
+        console.log("D. Een vraag die moeilijk te begrijpen is.");
+    
+        let vraag1Antwoord;
+        
+        do {
+            vraag1Antwoord = readlinesync.question("Kies het juiste antwoord (A, B, C of D): ");
+            
+            if (vraag1Antwoord !== "A" && vraag1Antwoord !== "B" && vraag1Antwoord !== "C" && vraag1Antwoord !== "D") {
+                console.log("Ongeldige invoer. Probeer het opnieuw.");
+            }
+        } while (vraag1Antwoord !== "A" && vraag1Antwoord !== "B" && vraag1Antwoord !== "C" && vraag1Antwoord !== "D");
+    
+        if (vraag1Antwoord === "A") {
+            console.log("Goed gedaan! Een retorische vraag vereist geen antwoord.");
+            Intelligence += 1; // Verhoog de intelligentie met 1
+        } else {
+            console.log("Helaas, dat is niet correct.");
+        }
+    
+        // Vraag 2
+        console.log("Wat is een synoniem voor 'enthousiast'?");
+        console.log("A. Verdrietig");
+        console.log("B. Blij");
+        console.log("C. Gemotiveerd");
+        console.log("D. Moe");
+    
+        let vraag2Antwoord;
+    
+        do {
+            vraag2Antwoord = readlinesync.question("Kies het juiste antwoord (A, B, C of D): ");
+            
+            if (vraag2Antwoord !== "A" && vraag2Antwoord !== "B" && vraag2Antwoord !== "C" && vraag2Antwoord !== "D") {
+                console.log("Ongeldige invoer. Probeer het opnieuw.");
+            }
+        } while (vraag2Antwoord !== "A" && vraag2Antwoord !== "B" && vraag2Antwoord !== "C" && vraag2Antwoord !== "D");
+    
+        if (vraag2Antwoord === "C") {
+            console.log("Dat klopt! 'Gemotiveerd' is een synoniem voor 'enthousiast'.");
+            Intelligence += 1; // Verhoog de intelligentie met 1
+        } else {
+            console.log("Helaas dat is niet correct");
+        }
+    
+        // Voeg hier meer vragen toe
+    
+        // Scenario voortzetten
+    }    
+}
 
 console.log("Welkom bij Karma");
 let startKeuze = readlinesync.question("Zeg 'start' om te beginnen");
@@ -193,5 +295,5 @@ while (startKeuze !== "start") {
     startKeuze = readlinesync.question("Zeg 'start' om te beginnen");
 }
 
-console.log(StartGame());
 
+console.log(StartGame());
