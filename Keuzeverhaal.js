@@ -42,7 +42,7 @@ function StartGame() {
 
     if (Scenario1Keuze === "A") {
         console.log("Goed gedaan! Dat klopt.");
-        Intelligence + 1; // Verhoog de intelligentie met 1
+        Intelligence += 1; // Verhoog de intelligentie met 1
     } else {
         console.log("Helaas, dat is niet het antwoord waar ik naar zocht.");
     }
@@ -61,12 +61,12 @@ function StartGame() {
 
     if (Scenario2Keuze === "A") {
         console.log("Je gaat met je vriend naar de schoolbibliotheek en bespreekt studiezaken.");
-        Intelligence + 1; // Verhoog de intelligentie met 1
+        Intelligence += 1; // Verhoog de intelligentie met 1
     } else if (Scenario2Keuze === "B") {
         console.log("Jullie gaan samen naar de kantine en genieten van een lunchpauze.");
     } else if (Scenario2Keuze === "C") {
         console.log("Je slaat de activiteit met je vriend over om te studeren.");
-        Intelligence + 1; // Verhoog de intelligentie met 1
+        Intelligence += 1; // Verhoog de intelligentie met 1
     } else {
         console.log("Jullie besluiten om met andere vrienden een groepsproject te bespreken.");
     }
@@ -108,13 +108,13 @@ function StadScenario(){
         console.log("Jullie hebben erg veel lol en het meisje wat je al een beetje kent geeft haar nummer aan je")
         console.log("je zwaait ze gedag en besluit naar huis te gaan en zegt je vriend ook gedag")
         GirlNumber = true
-        Popularity + 2; // Verhoog je populariteit omdat je nieuwe vrienden hebt gemaakt
-        GoodKarma + 1; // Verdien wat goede karma
+        Popularity += 2; // Verhoog je populariteit omdat je nieuwe vrienden hebt gemaakt
+        GoodKarma += 1; // Verdien wat goede karma
         Dag2()
     } else if (StadScenarioKeuze === "B") {
         console.log("Je begroet de meisjes vriendelijk, maar blijft bij je vriend.");
         console.log("Jullie hebben erg veel lol en besluiten uiteindelijk beide naar huis te gaan")
-        Popularity + 1; // Verhoog je populariteit door sociaal te zijn
+        Popularity += 1; // Verhoog je populariteit door sociaal te zijn
         Dag2()
     } else {
         console.log("Je besluit om alleen rond te hangen en ziet waar de dag je brengt.");
@@ -144,12 +144,12 @@ if (StadDrugScenarioKeuze === "A"){
     console.log("Je vriend besluit maar weer naar huis te gaan")
     console.log("een van de jongens geeft je zijn nummer om misschien nog een keer dit te gaan doen")
     StadDrugVriendNummber = true
-    BadKarma + 1;
+    BadKarma += 1;
     Dag2()
 } else if (StadDrugScenarioKeuze === "B") {
     console.log("Ze kijken niet veel op en gaan verder met roken")
     console.log("Jullie hebben erg veel lol en besluiten uiteindelijk beide naar huis te gaan")
-    GoodKarma + 1;
+    GoodKarma += 1;
     Dag2()
 }
 }
@@ -167,25 +167,25 @@ do {
 
 if (Scenario3Keuze === "A") {
     console.log("Je gaat met hem mee naar de stad");
-    Popularity + 1; // Verhoog je populariteit
-    GoodKarma + 1; // Verdien wat goede karma
+    Popularity += 1; // Verhoog je populariteit
+    GoodKarma += 1; // Verdien wat goede karma
     StadScenario()
 } else if (Scenario3Keuze === "B") {
     console.log("Je gaat naar huis om je broertjes te helpen met hun huiswerk, wat aardig van je.");
     console.log("Na dat je klaar bent met je broertjes helpen is het al heel laat")
-    GoodKarma + 1; // Verdien wat goede karma
+    GoodKarma += 1; // Verdien wat goede karma
     Dag2()
 } else if (Scenario3Keuze === "C") {
     console.log("Je stelt voor om een filmavond bij jou thuis te houden, en hij stemt hiermee in.");
     console.log("Jullie erg veel lol en je vriend besluit uiteindelijk naar huis te gaan")
-    Popularity + 1; // Verhoog je populariteit
+    Popularity += 1; // Verhoog je populariteit
     Dag2()
 } else {
     console.log("Je gaat naar je bijbaantje en verdient wat extra geld.");
     console.log("Na je werk is het al erg laat")
-    Wealth + 1; // Verhoog je welvaart
+    Wealth += 1; // Verhoog je welvaart
     Popularity -= 1; // Je bent niet beschikbaar voor sociale activiteiten, dus je populariteit daalt
-    Intelligence + 1; // Verdien wat intelligentie door te werken
+    Intelligence += 1; // Verdien wat intelligentie door te werken
     Dag2()
 }
 }
@@ -253,7 +253,7 @@ function Dag2(){
     
         if (vraag1Antwoord === "A") {
             console.log("Goed gedaan! Een retorische vraag vereist geen antwoord.");
-            Intelligence + 1; // Verhoog de intelligentie met 1
+            Intelligence += 1; // Verhoog de intelligentie met 1
         } else {
             console.log("Helaas dat is niet het antwoord waar ik voor zocht...");
         }
@@ -277,7 +277,7 @@ function Dag2(){
     
         if (vraag2Antwoord === "C") {
             console.log("Dat klopt! 'Gemotiveerd' is een synoniem voor 'enthousiast'.");
-            Intelligence + 1; // Verhoog de intelligentie met 1
+            Intelligence += 1; // Verhoog de intelligentie met 1
             Bigevent()
         } else {
             console.log("Helaas dat is niet het antwoord waar ik voor zocht...");
@@ -369,7 +369,7 @@ function Dag2(){
             console.log("door je school maak je erg handige connecties om je imperium te vergroten totdat je uiteindelijk alles heb wat je wilt")
             console.log("je had geen tijd voor liefde maar bent nu wel de man met het meeste op aarde")
             console.log("MONEYMAKER EINDE")
-            Wealth + 9999
+            Wealth += 9999
             Judgement()
         } else {
             console.log("Je hebt niks speciaals gedaan met je leven en je bleef een gemiddelde gast")
@@ -380,7 +380,7 @@ function Dag2(){
 }
 }
 
-function Judgement(){
+function Judgement() {
     let JudgementKeuze = readlinesync.question("Zeg 'Beoordelen' als je beoordeeld wilt worden ");
 
 
@@ -401,7 +401,7 @@ if (Intelligence === 0){
 } else if (Intelligence > 2){
     console.log("je had een gemiddelde intelligentie en deed het ok op school")
 } else if (Intelligence === 5){
-    consolelog("je was de slimste op school en overal")
+    console.log("je was de slimste op school en overal")
 }
 
 if (Wealth === 1){

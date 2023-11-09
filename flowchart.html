@@ -1,0 +1,188 @@
+Start
+  |
+  V
+Game Begins
+  |
+  V
+Day 1
+  |
+  V
+Scenario 1: School Morning
+  |
+  V
+Answer French Question
+  |
+  V
+Scenario 2: Meet Friend
+  |
+  V
+Choose Activity with Friend
+  |
+  V
+Scenario 3: After School
+  |
+  V
+Choose Activity After School
+  |
+  V
+City Scenario (StadScenario)
+  |
+  |---A---> Meet Girls in the City
+  |   |
+  |   |---A---> Make New Friends
+  |   |   |
+  |   |   |---Yes---> Next Day
+  |   |   |
+  |   |   |---No---> Next Day
+  |   |
+  |---B---> Stay with Friend
+  |   |
+  |   |---Yes---> Next Day
+  |   |---No---> Next Day
+  |   
+  |---C---> Go Alone in the City
+  |   |
+  |   |---Yes---> Drug Scenario (StadDrugScenario)
+  |   |   |
+  |   |   |---A---> Accept Drugs
+  |   |   |   |
+  |   |   |   |---Yes---> Negative Outcome
+  |   |   |   |
+  |   |   |   |---No---> Negative Outcome
+  |   |   |
+  |   |---No---> Next Day
+  |
+Scenario 3: After School (Continued)
+  |
+  |---A---> Go to the City
+  |   |
+  |   |---Yes---> City Scenario (StadScenario)
+  |   |
+  |   |---No---> Next Day
+  |
+  |---B---> Help Siblings
+  |   |
+  |   |---Yes---> Next Day
+  |   |---No---> Next Day
+  |
+  |---C---> Movie Night
+  |   |
+  |   |---Yes---> Next Day
+  |   |---No---> Next Day
+  |
+  |---D---> Work
+  |   |
+  |   |---Yes---> Next Day
+  |   |---No---> Next Day
+  |
+Day 2
+  |
+  V
+Morning Routine
+  |
+  |---A---> Meet Friend
+  |   |
+  |   |---A---> Nederlandsles
+  |   |   |
+  |   |   |---Answer Dutch Questions
+  |   |   |
+  |   |   |---Big Event
+  |   |       |
+  |   |       |---A---> Accept Invitation
+  |   |       |   |
+  |   |       |   |---Yes---> Negative Outcome
+  |   |       |   |
+  |   |       |   |---No---> Negative Outcome
+  |   |       |
+  |   |       |---B---> Reject Invitation
+  |   |           |
+  |   |           |---Yes---> Normal Ending
+  |   |           |
+  |   |           |---No---> Normal Ending
+  |   |
+  |   |---B---> Ignore Friend
+  |   |   |
+  |   |   |---A---> Nederlandsles
+  |   |       |
+  |   |       |---Answer Dutch Questions
+  |   |       |
+  |   |       |---Big Event
+  |   |           |
+  |   |           |---A---> Accept Invitation
+  |   |           |   |
+  |   |           |   |---Yes---> Negative Outcome
+  |   |           |   |
+  |   |           |   |---No---> Negative Outcome
+  |   |           |
+  |   |           |---B---> Reject Invitation
+  |   |               |
+  |   |               |---Yes---> Normal Ending
+  |   |               |
+  |   |               |---No---> Normal Ending
+  |   |
+  |   |---C---> Meet Girl
+  |       |
+  |       |---A---> Nederlandsles
+  |           |
+  |           |---Answer Dutch Questions
+  |           |
+  |           |---Big Event
+  |               |
+  |               |---A---> Accept Invitation
+  |               |   |
+  |               |   |---Yes---> Love Ending
+  |               |   |
+  |               |   |---No---> Normal Ending
+  |               |
+  |               |---B---> Reject Invitation
+  |                   |
+  |                   |---Yes---> Normal Ending
+  |                   |
+  |                   |---No---> Normal Ending
+  |
+  |---B---> Meet Girl
+  |   |
+  |   |---A---> Nederlandsles
+  |   |   |
+  |   |   |---Answer Dutch Questions
+  |   |   |
+  |   |   |---Big Event
+  |   |       |
+  |   |       |---A---> Accept Invitation
+  |   |       |   |
+  |   |       |   |---Yes---> Love Ending
+  |   |       |   |
+  |   |       |   |---No---> Normal Ending
+  |   |       |
+  |   |       |---B---> Reject Invitation
+  |   |           |
+  |   |           |---Yes---> Normal Ending
+  |   |           |
+  |   |           |---No---> Normal Ending
+  |   |
+  |---C---> No Special Events
+  |   |
+  |   |---A---> Intelligence < 5
+  |   |   |
+  |   |   |---Yes---> Normal Ending
+  |   |   |
+  |   |   |---No---> No Special Events (continued)
+  |   |
+  |   |---B---> Intelligence = 5
+  |       |
+  |       |---A---> Accept School Opportunity
+  |       |   |
+  |       |   |---Yes---> Money Maker Ending
+  |       |   |
+  |       |   |---No---> Normal Ending
+  |       |
+  |       |---B---> Reject School Opportunity
+  |           |
+  |           |---Yes---> Normal Ending
+  |           |
+  |           |---No---> Normal Ending
+  |
+Judgment
+  |
+  V
+End
